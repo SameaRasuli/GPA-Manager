@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student GPA Manager</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body>
+     
+
+     <!--Sidebar-->
+    <aside class="sidebar">
+        <div class="brand">
+            <h2>Student GPA Manager</h2>
+        </div>
+       <nav class="navigation">
+  <a href="index.html" >
+    <i data-lucide="layout-dashboard"></i>
+    <span>Dashboard</span>
+  </a>
+
+  <a href="analytics.html" class="active">
+    <i data-lucide="chart-no-axes-column"></i>
+    <span>Analytics</span>
+  </a>
+
+  <a href="predictor.html">
+    <i data-lucide="target"></i>
+    <span>GPA Predictor</span>
+  </a>
+
+  <a href="settings.html">
+    <i data-lucide="settings"></i>
+    <span>Settings</span>
+  </a>
+</nav>
+    </aside>
+
+    <!--main contents-->
+
+    <main class="main-content">
+        <!--Header-->
+    <header class="topbar">
+        <div class="page-heading">
+            <h1>Analytics</h1>
+            <p>Explore your grades and academic performances</p>
+        </div>
+        <button id="theme-toggle" type="button">
+            Toggle Theme
+        </button>
+    </header>
+
+        <section class="welcome-section">
+            <h2>Academic Analytics</h2>
+            <p>Analytics your grade and track your academic performance</p>
+        </section>
+
+        <section class="summary-cards">
+            <div class="summary-card">
+                <h3>Average Grade </h3>
+                <p id="average-grade">0.00</p>
+                <span>Out of 20</span>
+            </div>
+
+            <div class="summary-card">
+                <h3>Highest Grades</h3>
+                <p id="highest-grade">0.00</p>
+                <span>Best course grade</span>
+            </div>
+
+            <div class="summary-card">
+                <h3>Lowest Grade</h3>
+                <p id="lowest-grade">0.00</p>
+                <span>Course nedding attention</span>
+            </div>
+        </section>
+
+        <section class="chart-section">
+            <h2>Grade performance</h2>
+            <div class="grade-chart">
+                <div id="grade-chart-bars"></div>
+            </div>
+        </section>
+
+        <section class="performance-section">
+            <h2>Course Performance</h2>
+
+            <div class="table-container">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Course Name</th>
+                            <th>Grade</th>
+                            <th>Credits</th>
+                            <th>Performance</th>
+                        </tr>
+                    </thead>
+
+                    <tbody id="analytics-courses-list">
+                        <tr>
+                            <td colspan="4">No course data available yet</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+    </main>
+
+
+
+
+
+
+    <footer class="footer">
+        <p>&copy; 2026 Student GPA Manager. All rights reserved</p>
+        <div class="footer-links">
+            <a href="settings.html">Setting</a>
+            <a href="analytics.html">Analytics</a>
+        </div>
+    </footer>
+
+
+    <script type="module" src="main.ts"></script>
+        <script>lucide.createIcons();</script>
+    
+</body>
+</html>

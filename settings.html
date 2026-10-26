@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student GPA Manager</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body>
+     
+
+     <!--Sidebar-->
+    <aside class="sidebar">
+        <div class="brand">
+            <h2>Student GPA Manager</h2>
+        </div>
+        <nav class="navigation">
+  <a href="index.html" >
+    <i data-lucide="layout-dashboard"></i>
+    <span>Dashboard</span>
+  </a>
+
+  <a href="analytics.html">
+    <i data-lucide="chart-no-axes-column"></i>
+    <span>Analytics</span>
+  </a>
+
+  <a href="predictor.html">
+    <i data-lucide="target"></i>
+    <span>GPA Predictor</span>
+  </a>
+
+  <a href="settings.html"  class="active">
+    <i data-lucide="settings"></i>
+    <span>Settings</span>
+  </a>
+</nav>
+    </aside>
+
+    <!--Contents-->
+
+    <main class="main-content">
+        <!--Header-->
+    <header class="topbar">
+        <div class="page-heading">
+            <h1>Settings</h1>
+            <p>Customize your dashboard and academic Preferences</p>
+        </div>
+        <button id="theme-toggle" type="button">
+            Toggle Theme
+        </button>
+    </header>
+
+        <section class="welcome-section">
+            <h2>Settings</h2>
+            <p>Customize your dashboard and manage your prefernce.</p>
+        </section>
+
+        <section class="setting-section">
+            <h2>Apperance</h2>
+
+            <div class="setting-item">
+                <div class="setting-info">
+                    <h3>Dark Mode</h3>
+                    <p>Switch between light and dark themes.</p>
+                </div>
+
+                <label for="dark-mode-toggle">Enable Dark Mode</label>
+                <input
+                 type="checkbox" id="dark-mode-toggle">
+            </div>
+        </section>
+
+        <section class="setting-section">
+            <h2>Academic Preferences</h2>
+
+            <div class="setting-item">
+                <div class="setting-info">
+                    <h3>GPA Scale</h3>
+                    <p>Select the grading scale used by your institution.</p>
+                </div>
+
+                <label for="gpa-scale">Grading Scale</label>
+                <select id="gpa-scale">
+                    <option value="20" selected>0-20 Scale</option>
+                    <option value="4">0-4 Scale</option>
+                    <option value="100">0-100</option>
+                </select>
+
+            </div>
+        </section>
+
+        <section class="setting-section">
+            <h2>Data Management</h2>
+
+            <div class="setting-item">
+                <div class="setting-info">
+                    <h3>Reset Course Data</h3>
+                    <p>Remove saved courses and reset your academic data.</p>
+                </div>
+
+                <button id="reset-data-btn" type="button">
+                    Reset Data
+                </button>
+            </div>
+
+        </section>
+    </main>
+
+
+
+
+    <footer class="footer">
+        <p>&copy; 2026 Student GPA Manager. All rights reserved</p>
+        <div class="footer-links">
+            <a href="settings.html">Setting</a>
+            <a href="analytics.html">Analytics</a>
+        </div>
+    </footer>
+
+
+    <script type="module" src="main.ts"></script>
+        <script>lucide.createIcons();</script>
+    
+    
+</body>
+</html>

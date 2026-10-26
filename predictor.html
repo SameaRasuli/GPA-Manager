@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student GPA Manager</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body>
+     
+
+     <!--Sidebar-->
+    <aside class="sidebar">
+        <div class="brand">
+            <h2>Student GPA Manager</h2>
+        </div>
+
+        <nav class="navigation">
+  <a href="index.html" >
+    <i data-lucide="layout-dashboard"></i>
+    <span>Dashboard</span>
+  </a>
+
+  <a href="analytics.html">
+    <i data-lucide="chart-no-axes-column"></i>
+    <span>Analytics</span>
+  </a>
+
+  <a href="predictor.html" class="active">
+    <i data-lucide="target"></i>
+    <span>GPA Predictor</span>
+  </a>
+
+  <a href="settings.html">
+    <i data-lucide="settings"></i>
+    <span>Settings</span>
+  </a>
+</nav>
+       
+    </aside>
+
+    <!--Contents-->
+
+    <main class="main-content">
+
+        <!--Header-->
+    <header class="topbar">
+        <div class="page-heading">
+            <h1>GPA Predictor</h1>
+            <p>Plan your grades and reach your academic goals.</p>
+        </div>
+        <button id="theme-toggle" type="button">
+            Toggle Theme
+        </button>
+    </header>
+
+        <section class="welcome-section">
+            <h2>GPA Predictor</h2>
+            <p>Plan your future grades and reach your academic goals.</p>
+        </section>
+
+        <section class="summary-cards">
+            <div class="summary-card">
+                <h3>Current GPA </h3>
+                <p id="predictor-current-gpa">0.00</p>
+                <span>Out of 20</span>
+            </div>
+
+            <div class="summary-card">
+                <h3>Target GPA</h3>
+                <p id="target-gpa-display">18.00</p>
+                <span>Your academic goal</span>
+            </div>
+        </section>
+
+        <section class="predictor-form-section">
+            <h2>Set Your Target</h2>
+            <form id="predictor-form">
+
+                <div class="form-group">
+                    <label for="target-gpa">Target GPA (0-20)</label>
+                    <input
+                     type="number"
+                     id="target-gpa"
+                     min="0"
+                     max="100"
+                     step="0.01"
+                     value=""
+                     placeholder="e.g 18"
+                     required
+                
+                     >
+
+                </div>
+
+                <div class="form-group">
+                    <label for="future-credits">Future Credits</label>
+                    <input
+                     type="number"
+                     id="future-credits"
+                     min="1"
+                     placeholder="e.g 15"
+                     required
+                     >
+                     
+                </div>
+
+                <button type="submit" id="calculate-prediction-btn">
+                    Calculate Prediction
+
+                </button>
+            </form>
+        </section>
+
+        <section class="prediction-result-section">
+            <h2>Prediction Result</h2>
+
+            <div id="prediction-result">
+                <p>Enter your target GPA  and Future Credits to see your prediction</p>
+            </div>
+        </section>
+    </main>
+
+
+
+
+
+    <footer class="footer">
+        <p>&copy; 2026 Student GPA Manager. All rights reserved</p>
+        <div class="footer-links">
+            <a href="settings.html">Setting</a>
+            <a href="analytics.html">Analytics</a>
+        </div>
+    </footer>
+
+    <script type="module" src="main.ts"></script>
+        <script>lucide.createIcons();</script>
+    
+
+    
+</body>
+</html>
